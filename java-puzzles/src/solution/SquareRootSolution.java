@@ -1,7 +1,6 @@
-/**
- * 
- */
 package solution;
+
+import java.util.Scanner;
 
 /**
  *  Find integer value of <code> sqrt(N) </code>.<br/> 
@@ -15,17 +14,13 @@ public class SquareRootSolution {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		
-		System.out.println("Number"+"\t"+"my"+"\t"+"actual");
-		for (int i = 1; i < 1000000000; i++) {	
-			int my = SquareRootSolution.sqrt(i);
-			int actual = (int)Math.sqrt(i);
-			if (my!=actual) {
-				System.out.println(i+"\t"+my+"\t"+actual);	
-			}
-		}
-//		System.out.println(sqrt(88412));
+	public static void main(String[] args) {		
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter one integer:");
+		int N = scanner.nextInt();
+		System.out.println("Square root of "+N+"="+sqrt(N));
+		scanner.close();
+
 	}
 	
 	/**
@@ -37,21 +32,25 @@ public class SquareRootSolution {
 	static int sqrt(int N)
 	{
 		double answer = 0;
+		int iteration = 0;
 		/*
 		 * dishonor 0 and negative numbers
 		 */
 		if (N <= 0) 
 		{
+			System.out.println("No. of iteration(s)="+iteration);
 			return (int) answer;
 		}	
 		answer = N/2;	
 		while (answer*answer > N) {
 			answer = (int)answer/2;
+			iteration++;
 		}		
 		if (answer*answer == N) {
 			/*
 			 * Hurray! We got the square root
 			 */
+			System.out.println("No. of iteration(s)="+iteration);
 			return (int) answer;
 		}
 		else {
@@ -63,16 +62,19 @@ public class SquareRootSolution {
 			 */
 			double finalAnswer = ++answer;
 			if (finalAnswer*finalAnswer==N) {
+				System.out.println("No. of iteration(s)="+iteration);
 				return (int) finalAnswer;
 			}
 			if (finalAnswer*finalAnswer > N) {
+				System.out.println("No. of iteration(s)="+iteration);
 				return (int) (finalAnswer-1);
 			}
 			while (answer*answer < N ) {
 				finalAnswer = answer;
 				answer++;
+				iteration++;
 			}
-
+			System.out.println("No. of iteration(s)="+iteration);
 			return (int) (answer*answer != N ? finalAnswer:answer);
 		}
 	}
