@@ -17,6 +17,7 @@ import com.fichadia.chat.response.GetStatusResponse;
 import com.fichadia.chat.response.LogInResponse;
 import com.fichadia.chat.response.SendMessageReponse;
 import com.fichadia.chat.response.SignUpReponse;
+import com.fichadia.chat.server.factory.ChatServerHandlerFactory;
 
 /**
  * 
@@ -45,16 +46,19 @@ public class ChatConnectorImpl implements ChatConnector
 	@Override
 	public SignUpReponse signUp(SignUpRequest signUpRequest) throws RemoteException
 	{
-		SignUpReponse response =new SignUpReponse();
-		response.setClientId("jay9dj");
-		response.setStatus(IErrorConstants.STATUS_OK);
-		try {
-			System.out.println(RemoteServer.getClientHost());
-		} catch (ServerNotActiveException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return response;
+		return (SignUpReponse) ChatServerHandlerFactory.getHandler(signUpRequest).handleRequest(signUpRequest);
+//		
+//		
+//		SignUpReponse response =new SignUpReponse();
+//		response.setClientId("jay9dj");
+//		response.setStatus(IErrorConstants.STATUS_OK);
+//		try {
+//			System.out.println(RemoteServer.getClientHost());
+//		} catch (ServerNotActiveException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return response;
 	}
 
 	/* (non-Javadoc)

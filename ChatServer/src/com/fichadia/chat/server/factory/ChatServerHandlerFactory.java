@@ -11,6 +11,7 @@ import com.fichadia.chat.request.LogInRequest;
 import com.fichadia.chat.request.SendMessageRequest;
 import com.fichadia.chat.request.SignUpRequest;
 import com.fichadia.chat.server.handler.AbstractChatServerRequestHandler;
+import com.fichadia.chat.server.handler.SignUpRequestHandler;
 
 /**
  * @author Jay Fichadia
@@ -42,7 +43,7 @@ public class ChatServerHandlerFactory
 		}
 		if (chatServerRequest instanceof SignUpRequest)
 		{
-			
+			return new SignUpRequestHandler();
 		}
 		return null;
 	}

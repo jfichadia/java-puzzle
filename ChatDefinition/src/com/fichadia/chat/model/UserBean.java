@@ -3,14 +3,19 @@
  */
 package com.fichadia.chat.model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
  * @author Jay Fichadia
  *
  */
-public class UserBean
+public class UserBean implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1139364481506025089L;
 	public UserBean(String name, String email, int uid, String password, Date dob)
 	{
 		super();
