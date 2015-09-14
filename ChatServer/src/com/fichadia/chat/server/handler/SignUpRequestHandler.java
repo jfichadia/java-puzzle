@@ -9,7 +9,6 @@ import com.fichadia.chat.request.SignUpRequest;
 import com.fichadia.chat.response.ChatServerResponse;
 import com.fichadia.chat.response.SignUpReponse;
 import com.fichadia.chat.server.dao.UserDAO;
-import com.mysql.fabric.Response;
 
 /**
  * @author Jay Fichadia

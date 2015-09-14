@@ -10,4 +10,9 @@ package com.fichadia.chat.response;
 public class SendMessageReponse extends ChatServerResponse
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2287178021550296203L;
+
 }

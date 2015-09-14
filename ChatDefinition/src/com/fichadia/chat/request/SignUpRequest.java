@@ -11,6 +11,10 @@ import com.fichadia.chat.model.UserBean;
  */
 public class SignUpRequest extends ChatServerRequest
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3302902278370621857L;
 	private UserBean newUser;
 
 	/**

@@ -1,7 +1,6 @@
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.sql.Date;
-import java.util.Calendar;
 
 import com.fichadia.chat.definition.ChatConnector;
 import com.fichadia.chat.model.UserBean;
@@ -24,7 +23,6 @@ public class Test {
 		try {
 			Registry reg=LocateRegistry.getRegistry(1099);
 			ChatConnector chatConnector = (ChatConnector) reg.lookup(ChatConnector.class.getName());
-			
 			UserBean bean = new UserBean("Jay Fichadia", "fichadia.jay@gmail.com", 0, "jfichadia", Date.valueOf("1991-02-12"));
 			SignUpRequest request = new SignUpRequest();
 			request.setNewUser(bean);

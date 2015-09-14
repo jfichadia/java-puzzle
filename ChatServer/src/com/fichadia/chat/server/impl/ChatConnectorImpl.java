@@ -1,10 +1,7 @@
 package com.fichadia.chat.server.impl;
 import java.rmi.RemoteException;
-import java.rmi.server.RemoteServer;
-import java.rmi.server.ServerNotActiveException;
 
 import com.fichadia.chat.definition.ChatConnector;
-import com.fichadia.chat.definition.IErrorConstants;
 import com.fichadia.chat.request.GetNewMessageRequest;
 import com.fichadia.chat.request.GetOnlineUsersRequest;
 import com.fichadia.chat.request.GetStatusRequest;

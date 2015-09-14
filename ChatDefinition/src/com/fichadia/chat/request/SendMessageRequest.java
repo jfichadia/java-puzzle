@@ -11,6 +11,10 @@ import com.fichadia.chat.model.ChatMessage;
  */
 public class SendMessageRequest extends ChatServerRequest
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4084722105099615661L;
 	private ChatMessage chatMessage;
 	
 	public void setChatMessage(ChatMessage chatMessage)

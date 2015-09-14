@@ -14,6 +14,10 @@ import com.fichadia.chat.model.Status;
 public class GetStatusResponse extends ChatServerResponse
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6399843785533443025L;
 	private Map<String, Status> clientIDtoStatusMap;
 
 	/**

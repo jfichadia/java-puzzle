@@ -12,6 +12,10 @@ import java.util.List;
 public class GetStatusRequest extends ChatServerRequest
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3165390723690949497L;
 	private List<String> clientList;
 
 	/**

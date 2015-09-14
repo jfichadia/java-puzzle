@@ -10,4 +10,9 @@ package com.fichadia.chat.request;
 public class GetNewMessageRequest extends ChatServerRequest
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6489231603226777842L;
+
 }

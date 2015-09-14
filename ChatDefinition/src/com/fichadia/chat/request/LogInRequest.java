@@ -10,6 +10,11 @@ package com.fichadia.chat.request;
 public class LogInRequest extends ChatServerRequest
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3009692005019185462L;
+
 	private String username;
 	
 	private String password;

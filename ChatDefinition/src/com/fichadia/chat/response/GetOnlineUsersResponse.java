@@ -13,6 +13,10 @@ import com.fichadia.chat.model.UserBean;
  */
 public class GetOnlineUsersResponse extends ChatServerResponse
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1109103462335025632L;
 	private List<UserBean> onlineUsersList;
 
 	/**

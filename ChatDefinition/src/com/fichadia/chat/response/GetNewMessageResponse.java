@@ -13,6 +13,10 @@ import com.fichadia.chat.model.ChatMessage;
  */
 public class GetNewMessageResponse extends ChatServerResponse
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1461920825347137L;
 	private List<ChatMessage> newMessagesList;
 
 	/**

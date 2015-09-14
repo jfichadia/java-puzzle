@@ -5,7 +5,6 @@ package com.fichadia.chat.server.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.fichadia.chat.model.UserBean;
